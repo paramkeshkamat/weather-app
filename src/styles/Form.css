@@ -1,0 +1,24 @@
+form {
+  display: block;
+  padding: 50px 30px;
+}
+
+input {
+  border-radius: 30px;
+  border: none;
+  padding: 5px 20px;
+  font-size: 18px;
+  width: 100%;
+  outline: none;
+  box-shadow: 2px 3px 1px rgba(0, 0, 0, 0.2);
+}
+
+input:focus {
+  box-shadow: 1px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 444px) {
+  form {
+    padding: 50px 10px;
+  }
+}
