@@ -11,7 +11,7 @@ const WeatherData = ({ searchCity, getTemperature }) => {
   const [isLoading, setIsLoading] = useState(true);
 
   const getDate = () => {
-    let months = [
+    const months = [
       "January",
       "February",
       "March",
@@ -25,7 +25,7 @@ const WeatherData = ({ searchCity, getTemperature }) => {
       "November",
       "December",
     ];
-    let days = [
+    const days = [
       "Sunday",
       "Monday",
       "Tuesday",
