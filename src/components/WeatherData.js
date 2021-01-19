@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import Loading from "./Loading";
-import { RiErrorWarningLine, RiMistFill, RiThunderstormsFill, RiHazeFill, RiFoggyFill } from "react-icons/ri";
+import { RiErrorWarningLine, RiMistFill, RiThunderstormsFill, RiHazeFill, RiFoggyFill, RiDrizzleFill, RiTornadoFill} from "react-icons/ri";
 import { IoMdSnow } from "react-icons/io";
 import { IoRainy } from "react-icons/io5";
-import { FaCloudSun, FaSun, FaCloud } from "react-icons/fa";
+import { FaSun, FaCloud } from "react-icons/fa";
 import "../styles/WeatherData.css";
 
 const WeatherData = ({ searchCity, getTemperature }) => {
@@ -47,24 +47,26 @@ const WeatherData = ({ searchCity, getTemperature }) => {
   const getWeatherIcon = () => {
     const weatherIcon = weatherData.weather[0].main;
 
-    if (weatherIcon === "Few clouds") {
-      return <FaCloudSun />;
-    } else if (weatherIcon === "Scattered clouds" || weatherIcon === "Clouds") {
-      return <FaCloud />;
-    } else if (weatherIcon === "Shower rain" || weatherIcon === "Rain") {
-      return <IoRainy />;
-    } else if (weatherIcon === "Thunderstorm") {
+    if(weatherIcon === "ThunderStorm") {
       return <RiThunderstormsFill />;
-    } else if (weatherIcon === "Snow") {
-      return <IoMdSnow />;
-    } else if (weatherIcon === "Mist") {
-      return <RiMistFill />;
+    } else if(weatherIcon === "Drizzle") {
+      return <RiDrizzleFill />;
+    } else if(weatherIcon === "Rain") {
+      return <IoRainy />;
+    } else if(weatherIcon === "Snow") {
+      return <IoMdSnow />; 
+    } else if(weatherIcon === "Clear") {
+      return <FaSun />;
+    } else if(weatherIcon === "Clouds") {
+      return <FaCloud />;
     } else if (weatherIcon === "Haze") {
       return <RiHazeFill />;
     } else if (weatherIcon === "Fog") {
-    return <RiFoggyFill />;
+      return <RiFoggyFill />;
+    } else if(weatherIcon === "Tornado") {
+      return <RiTornadoFill />;
     } else {
-      return <FaSun />;
+      return <RiMistFill />;
     }
   };
 
