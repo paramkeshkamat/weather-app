@@ -1,6 +1,6 @@
 # React Weather App
 \
-Weather App using react and openweatherapp API where you can search a city in the search bar and it will show the wearther details about that city 
+Weather App using react and openweathermap API where you can search a city in the search bar and it will show the weather details about that city
 ## Screenshots: 
 ### 1. When temperature is greater than 20°C :
 ![weather-app-screenhot-1](https://i.ibb.co/rfbt394/weather-app-21.png)
